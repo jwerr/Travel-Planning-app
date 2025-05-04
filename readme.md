@@ -49,8 +49,8 @@ my_dream/
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   cd YOUR_REPO_NAME
+   git clone https://github.com/jwerr/Travel-Planning-app.git
+   cd my_dream 3
    ```
 
 2. **Create a virtual environment**
@@ -121,7 +121,6 @@ my_dream/
 
 ## 📌 License
 
-MIT License © 2025
 Developed with ❤️ by Shivayokeshwari
 
 ---
