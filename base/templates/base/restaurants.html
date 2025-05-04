@@ -1,0 +1,181 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Restaurants in Worcester{% endblock %}
+
+{% block content %}
+<main class="container mt-4">
+    <section id="restaurants" class="py-5">
+        <h2 class="text-center display-4 mb-4">Top Restaurants in Worcester</h2>
+        <div class="row g-4">
+            <!-- The Fix Burger Bar -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/the_fix_burger_bar.jpg' %}" class="card-img-top" alt="The Fix Burger Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">The Fix Burger Bar</h5>
+                        <p class="card-text">A modern burger joint serving up gourmet burgers, craft beers, and unique sides in a casual setting.</p>
+                        <a href="https://www.thefixburgerbar.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bocado Tapas Bar -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/bocado_tapas_bar.jpg' %}" class="card-img-top" alt="Bocado Tapas Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">Bocado Tapas Bar</h5>
+                        <p class="card-text">Enjoy authentic Spanish tapas and an extensive wine list in a cozy and vibrant atmosphere.</p>
+                        <a href="https://www.bocadotapasbar.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Armsby Abbey -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/armsby_abbey.jpg' %}" class="card-img-top" alt="Armsby Abbey">
+                    <div class="card-body">
+                        <h5 class="card-title">Armsby Abbey</h5>
+                        <p class="card-text">A farm-to-table gastropub offering delicious seasonal dishes and a craft beer selection in a rustic, relaxed setting.</p>
+                        <a href="https://www.armsbyabbey.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Living Room -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/the_living_room.jpg' %}" class="card-img-top" alt="The Living Room">
+                    <div class="card-body">
+                        <h5 class="card-title">The Living Room</h5>
+                        <p class="card-text">A warm and welcoming space serving comfort food with a contemporary twist, perfect for casual dining or a night out.</p>
+                        <a href="https://www.thelivingroomrestaurant.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livia’s Dish -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/livias_dish.jpg' %}" class="card-img-top" alt="Livia’s Dish">
+                    <div class="card-body">
+                        <h5 class="card-title">Livia’s Dish</h5>
+                        <p class="card-text">A charming family-owned restaurant serving Italian-American favorites, with an emphasis on fresh ingredients and bold flavors.</p>
+                        <a href="https://www.liviasdish.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sullivan’s Steakhouse -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/sullivans_steakhouse.jpg' %}" class="card-img-top" alt="Sullivan’s Steakhouse">
+                    <div class="card-body">
+                        <h5 class="card-title">Sullivan’s Steakhouse</h5>
+                        <p class="card-text">An upscale steakhouse known for its exceptional cuts of meat, seafood, and classic cocktails in a stylish atmosphere.</p>
+                        <a href="https://www.sullivanssteakhouse.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Worcester Kitchen & Bar -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/the_worcester_kitchen_and_bar.jpg' %}" class="card-img-top" alt="The Worcester Kitchen & Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">The Worcester Kitchen & Bar</h5>
+                        <p class="card-text">A contemporary American kitchen and bar offering a menu of fresh, local ingredients in a modern, comfortable setting.</p>
+                        <a href="https://www.theworcesterkitchen.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Citizen Wine Bar -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/the_citizen_wine_bar.jpg' %}" class="card-img-top" alt="The Citizen Wine Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">The Citizen Wine Bar</h5>
+                        <p class="card-text">A stylish wine bar offering an extensive selection of wines paired with a carefully curated menu of appetizers and small plates.</p>
+                        <a href="https://www.citizenwinebar.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Restaurants -->
+            <!-- Add the following for 7 additional restaurants -->
+
+            <!-- Restaurant 9 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/restaurant_9.jpg' %}" class="card-img-top" alt="Restaurant 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant 9</h5>
+                        <p class="card-text">A fusion of traditional and modern flavors in a cozy, intimate dining space offering a variety of cuisines.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 10 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/restaurant_10.jpg' %}" class="card-img-top" alt="Restaurant 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant 10</h5>
+                        <p class="card-text">A gourmet restaurant offering an innovative menu with locally sourced ingredients and an exceptional wine list.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 11 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/restaurant_11.jpg' %}" class="card-img-top" alt="Restaurant 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant 11</h5>
+                        <p class="card-text">An eclectic mix of global cuisines with an emphasis on fresh seafood and creative vegetarian options.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue for Restaurant 12-15 with similar structure -->
+
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta text-center py-5" style="background-color: #212529; color: white;">
+        <h2 class="display-4">Need Help Finding a Restaurant?</h2>
+        <p>If you have any questions or need further recommendations, feel free to contact us.</p>
+        <a href="mailto:samplemail@gmail.com" class="btn btn-warning">Contact Us</a>
+    </section>
+</main>
+
+<style>
+    .hover-shadow:hover {
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cta {
+        background-image: url("{% static 'base/images/contact_bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cta h2 {
+        color: #ffd700;
+    }
+
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+    }
+</style>
+
+{% endblock %}

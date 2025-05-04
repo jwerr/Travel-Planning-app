@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Destinations to Itinerary</title>
+</head>
+<body>
+    <h2>Adding Destinations to {{ itinerary.title }}</h2>
+    <p><strong>Itinerary Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Form fields for selecting destination, day and activities -->
+        {{ form.as_p }}
+        
+        <button type="submit">Add Destination</button>
+    </form>
+    
+    <h3>Current Destinations in this Itinerary</h3>
+    <ul>
+        {% for itinerary_destination in itinerary_destinations %}
+            <li>
+                <strong>Day {{ itinerary_destination.day }}:</strong> 
+                {{ itinerary_destination.destination.name }} 
+                - Activities: {{ itinerary_destination.activities }}
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'view_itinerary' pk=itinerary.id %}">Back to Itinerary</a>
+</body>
+</html>

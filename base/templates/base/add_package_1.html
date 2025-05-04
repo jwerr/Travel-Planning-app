@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Create Travel Package{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card p-4 shadow-sm">
+        <h2 class="text-center mb-4" style="color: #333; font-weight: bold;">Create a New Travel Package</h2>
+        <form method="POST" action="{% url 'add_package' %}">
+            {% csrf_token %}
+
+            <div class="form-floating mb-3">
+                {{ form.name }}
+                <label for="id_name">Package Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                {{ form.description }}
+                <label for="id_description">Description</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                {{ form.price }}
+                <label for="id_price">Price</label>
+            </div>
+
+            <h3 class="mt-4 mb-3" style="font-weight: bold; color: #555;">Select Destinations:</h3>
+            <div class="form-group mb-3">
+                {% for destination in form.destinations %}
+                    <div class="form-check">
+                        {{ destination.tag }}
+                        {{ destination.choice_label }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 mt-3" style="font-weight: bold;">Create Package</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

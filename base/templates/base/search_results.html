@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h1>Search Results</h1>
+    {% if query %}
+        <p>Results for "{{ query }}":</p>
+        {% if results %}
+            <ul>
+                {% for destination in results %}
+                    <li>
+                        <a href="{% url 'destination_detail' destination.id %}">{{ destination.name }}</a>
+                        <p>{{ destination.description|truncatechars:100 }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    {% else %}
+        <p>Please enter a search term.</p>
+    {% endif %}
+{% endblock %}

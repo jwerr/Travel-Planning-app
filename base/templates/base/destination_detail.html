@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>{{ destination.name }}</h2>
+        <p><strong>Location:</strong> {{ destination.location }}</p>
+        <p><strong>Description:</strong> {{ destination.description }}</p>
+        
+        <a href="{% url 'package_detail' destination.package.pk %}" class="btn btn-secondary mt-3">Back to Package</a>
+    </div>
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .btn-secondary {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+{% endblock %}

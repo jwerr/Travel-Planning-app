@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>{{ package.name }}</h2>
+        <p><strong>Description:</strong> {{ package.description }}</p>
+        <p><strong>Price:</strong> ${{ package.price }}</p>
+        
+        <h3>Destinations:</h3>
+        <ul>
+            {% for destination in package.destinations.all %}
+                <li>
+                    <a href="{% url 'destination_detail' destination.pk %}">
+                        <strong>{{ destination.name }}</strong>
+                    </a> - {{ destination.location }}<br>
+                    {{ destination.description }}  <!-- Additional destination details, if available -->
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <a href="{% url 'package_list' %}" class="btn btn-secondary mt-3">Back to Packages</a>
+    </div>
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #007BFF;
+        }
+
+        p, li {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .btn-secondary {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Itinerary</title>
+</head>
+<body>
+    <h2>Create New Itinerary</h2>
+    <p>Please fill out the details below to create a new itinerary.</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Form fields for itinerary creation -->
+        {{ form.as_p }}
+        
+        <button type="submit">Create Itinerary</button>
+    </form>
+    
+    <h3>Itinerary Tips:</h3>
+    <ul>
+        <li>Include start and end dates for your trip.</li>
+        <li>Choose your destinations and activities carefully.</li>
+        <li>You can add destinations later to this itinerary.</li>
+    </ul>
+
+    <a href="{% url 'view_itinerary_list' %}">Back to Itinerary List</a>
+</body>
+</html>

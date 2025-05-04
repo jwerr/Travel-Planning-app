@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .actions {
+            margin-top: 20px;
+        }
+        .actions a {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .actions a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ itinerary.title }}</h2>
+    <p><strong>Travel Dates:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
+    <p><strong>Description:</strong> {{ itinerary.description }}</p>
+
+    <h3>Destinations</h3>
+    <ul>
+        {% for itinerary_destination in itinerary_destinations %}
+            <li>
+                <strong>Day {{ itinerary_destination.day }}:</strong> 
+                {{ itinerary_destination.destination.name }} 
+                <br>
+                <strong>Activities:</strong> {{ itinerary_destination.activities }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="actions">
+        <a href="{% url 'add_destinations' itinerary.id %}">Add Destinations</a>
+        <a href="{% url 'edit_itinerary' itinerary.id %}">Edit Itinerary</a>
+        <a href="{% url 'view_itinerary_list' %}">Back to Itineraries</a>
+    </div>
+</body>
+</html>

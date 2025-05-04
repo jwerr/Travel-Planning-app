@@ -1,0 +1,60 @@
+{% extends "base/base.html" %}
+
+{% block title %}Available Travel destinations{% endblock %}
+
+{% block extra_css %}
+<style>
+    .package-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .package-box {
+        background-color: #f0f8ff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        text-align: center;
+    }
+
+    .package-box:hover {
+        transform: scale(1.05);
+    }
+
+    .package-box h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .package-box p {
+        font-size: 1em;
+        margin: 5px 0;
+        color: #555;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Available Travel Packages   </h1>
+<div class="package-container">
+    {% for package in packages %}
+        <div class="package-box">
+            <h2>{{ package.name }}</h2>
+            <p><strong>Destination:</strong> {{ package.destination }}</p>
+            <p><strong>Price:</strong> ${{ package.price }}</p>
+            <p><strong>Duration:</strong> {{ package.duration }} days</p>
+            <p><strong>Description:</strong> {{ package.description }}</p>
+            <p><strong>Available Slots:</strong> {{ package.available_slots }}</p>
+            <p><strong>Start Date:</strong> {{ package.start_date }}</p>
+            <p><strong>End Date:</strong> {{ package.end_date }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

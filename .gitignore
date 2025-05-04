@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# Django
+db.sqlite3
+*.sqlite3
+*.log
+local_settings.py
+
+# Media files (user uploads)
+media/
+!media/destinations/images/.gitkeep  # Keep the images folder structure
+
+# IDEs/editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Staticfiles (optional if generated)
+staticfiles/
+static/
+
+# Migrations (optional to ignore compiled migrations)
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Test cache
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+
+# Env variable files (if used)
+.env

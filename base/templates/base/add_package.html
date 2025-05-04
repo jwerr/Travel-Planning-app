@@ -1,0 +1,74 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Add New Travel Package{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="section">
+        <h2 class="text-center mb-4">Add a New Travel Package</h2>
+        <form method="POST" enctype="multipart/form-data" class="row g-3">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label for="id_name" class="form-label">Package Name</label>
+                <input type="text" name="name" class="form-control" id="id_name" value="{{ form.name.value|default:'' }}">
+                {% if form.name.errors %}
+                    <div class="text-danger">{{ form.name.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_destination" class="form-label">Destination</label>
+                <input type="text" name="destination" class="form-control" id="id_destination" value="{{ form.destination.value|default:'' }}">
+                {% if form.destination.errors %}
+                    <div class="text-danger">{{ form.destination.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_price" class="form-label">Price ($)</label>
+                <input type="number" name="price" class="form-control" id="id_price" value="{{ form.price.value|default:'' }}">
+                {% if form.price.errors %}
+                    <div class="text-danger">{{ form.price.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_duration" class="form-label">Duration (days)</label>
+                <input type="number" name="duration" class="form-control" id="id_duration" value="{{ form.duration.value|default:'' }}">
+                {% if form.duration.errors %}
+                    <div class="text-danger">{{ form.duration.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-12">
+                <label for="id_description" class="form-label">Description</label>
+                <textarea name="description" class="form-control" id="id_description">{{ form.description.value|default:'' }}</textarea>
+                {% if form.description.errors %}
+                    <div class="text-danger">{{ form.description.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_start_date" class="form-label">Start Date</label>
+                <input type="date" name="start_date" class="form-control" id="id_start_date" value="{{ form.start_date.value|default:'' }}">
+                {% if form.start_date.errors %}
+                    <div class="text-danger">{{ form.start_date.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_end_date" class="form-label">End Date</label>
+                <input type="date" name="end_date" class="form-control" id="id_end_date" value="{{ form.end_date.value|default:'' }}">
+                {% if form.end_date.errors %}
+                    <div class="text-danger">{{ form.end_date.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="id_available_slots" class="form-label">Available Slots</label>
+                <input type="number" name="available_slots" class="form-control" id="id_available_slots" value="{{ form.available_slots.value|default:'' }}">
+                {% if form.available_slots.errors %}
+                    <div class="text-danger">{{ form.available_slots.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Add Package</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Budget Hotels in Worcester{% endblock %}
+
+{% block content %}
+<main class="container mt-4">
+    <section id="budget-hotels" class="py-5">
+        <h2 class="text-center display-4 mb-4">Budget Hotels in Worcester</h2>
+        <div class="row g-4">
+            <!-- Budget Hotel 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/budget_hotel_1.jpg' %}" class="card-img-top" alt="Hotel 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Worcester Inn</h5>
+                        <p class="card-text">Affordable yet comfortable accommodation in a central location, offering basic amenities for a pleasant stay without breaking the bank.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Hotel 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/budget_hotel_2.jpg' %}" class="card-img-top" alt="Hotel 2">
+                    <div class="card-body">
+                        <h5 class="card-title">The Severn Budget Stay</h5>
+                        <p class="card-text">A cozy and affordable hotel with excellent views of the River Severn, providing great value for budget-conscious travelers.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Hotel 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/budget_hotel_3.jpg' %}" class="card-img-top" alt="Hotel 3">
+                    <div class="card-body">
+                        <h5 class="card-title">City View Hostel</h5>
+                        <p class="card-text">A budget-friendly hostel offering both private and shared rooms, perfect for solo travelers and backpackers looking to explore Worcester.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Hotel 4 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/budget_hotel_4.jpg' %}" class="card-img-top" alt="Hotel 4">
+                    <div class="card-body">
+                        <h5 class="card-title">The Budget Inn</h5>
+                        <p class="card-text">Simple, clean, and affordable, this inn provides basic amenities and comfortable accommodations in a great location.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Hotel 5 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/budget_hotel_5.jpg' %}" class="card-img-top" alt="Hotel 5">
+                    <div class="card-body">
+                        <h5 class="card-title">The Low-Cost Lodge</h5>
+                        <p class="card-text">A convenient and inexpensive lodge offering comfortable rooms for travelers on a tight budget, with easy access to transportation.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta text-center py-5" style="background-color: #212529; color: white;">
+        <h2 class="display-4">Need Help Booking?</h2>
+        <p>Contact us for more budget-friendly options and to book your stay in Worcester.</p>
+        <a href="mailto:samplemail@gmail.com" class="btn btn-warning">Contact Us</a>
+    </section>
+</main>
+
+<style>
+    .hover-shadow:hover {
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cta {
+        background-image: url("{% static 'base/images/contact_bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cta h2 {
+        color: #ffd700;
+    }
+
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+    }
+</style>
+{% endblock %}

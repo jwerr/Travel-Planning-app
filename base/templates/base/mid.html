@@ -1,0 +1,102 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Mid-Level Hotels in Worcester{% endblock %}
+
+{% block content %}
+<main class="container mt-4">
+    <section id="mid-level-hotels" class="py-5">
+        <h2 class="text-center display-4 mb-4">Mid-Level Hotels in Worcester</h2>
+        <div class="row g-4">
+            <!-- Mid-Level Hotel 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/mid_level_hotel_1.jpg' %}" class="card-img-top" alt="Hotel 1">
+                    <div class="card-body">
+                        <h5 class="card-title">The Central Stay</h5>
+                        <p class="card-text">A well-priced mid-range hotel offering modern rooms and easy access to Worcester's shops and attractions.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Level Hotel 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/mid_level_hotel_2.jpg' %}" class="card-img-top" alt="Hotel 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Worcester City Lodge</h5>
+                        <p class="card-text">An affordable option with quality service, modern facilities, and convenient access to Worcester's historical sites.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Level Hotel 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/mid_level_hotel_3.jpg' %}" class="card-img-top" alt="Hotel 3">
+                    <div class="card-body">
+                        <h5 class="card-title">The Garden Court</h5>
+                        <p class="card-text">With spacious rooms and a cozy atmosphere, this hotel offers excellent value, blending comfort and affordability.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Level Hotel 4 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/mid_level_hotel_4.jpg' %}" class="card-img-top" alt="Hotel 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Worcester Plaza</h5>
+                        <p class="card-text">A centrally located hotel offering excellent service and spacious rooms at an affordable rate for mid-range budgets.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mid-Level Hotel 5 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-lg hover-shadow">
+                    <img src="{% static 'base/images/mid_level_hotel_5.jpg' %}" class="card-img-top" alt="Hotel 5">
+                    <div class="card-body">
+                        <h5 class="card-title">The Victoria Hotel</h5>
+                        <p class="card-text">A charming hotel with a balance of quality and price, offering comfortable rooms and good facilities for both tourists and business travelers.</p>
+                        <a href="https://example.com" class="btn btn-primary" target="_blank">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta text-center py-5" style="background-color: #212529; color: white;">
+        <h2 class="display-4">Need Assistance with Bookings?</h2>
+        <p>Contact us for personalized recommendations and help with booking your stay in Worcester.</p>
+        <a href="mailto:samplemail@gmail.com" class="btn btn-warning">Contact Us</a>
+    </section>
+</main>
+
+<style>
+    .hover-shadow:hover {
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cta {
+        background-image: url("{% static 'base/images/contact_bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cta h2 {
+        color: #ffd700;
+    }
+
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+    }
+</style>
+{% endblock %}
